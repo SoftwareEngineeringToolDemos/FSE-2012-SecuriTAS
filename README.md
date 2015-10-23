@@ -3,6 +3,7 @@ This repository contains information related to the tool SecuriTAS presented in 
 
 This repository _is not_ the original repository for this tool. Here are some links to the original project:
 * [The Official Project Page, not including the source code](https://code.google.com/p/securitas/)
+* [Original Download Link](https://code.google.com/p/securitas/downloads/list)
 
 In this repository, for SecuriTAS you will find:
 * :x: Source code (not available)
