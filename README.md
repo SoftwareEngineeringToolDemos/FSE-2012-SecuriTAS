@@ -8,6 +8,6 @@ This repository _is not_ the original repository for this tool. Here are some li
 In this repository, for SecuriTAS you will find:
 * :x: Source code (not available)
 * :white_check_mark: [The original tool](https://github.com/SoftwareEngineeringToolDemos/FSE-2012-SecuriTAS/blob/master/binaries/Securitas.zip) (available)
-* :white_check_mark: [User guide to install and execute instructions in SecuriTAS(available)](https://github.com/SoftwareEngineeringToolDemos/FSE-2012-SecuriTAS/blob/master/User%20guide.pdf)
+* :white_check_mark: [User guide to install and execute instructions in SecuriTAS](https://github.com/SoftwareEngineeringToolDemos/FSE-2012-SecuriTAS/blob/master/User%20guide.pdf) (available)
 
-This repository was constructed by [Shaown Sarker](https://github.com/shaowns) under the supervision of [Dr. Emerson Murphy-Hill](https://github.com/CaptainEmerson). Thanks to Dr. Liliana Pasquale and the co-authors of SecuriTAS for their help in establishing this repository.
+This repository was constructed by [Shaown Sarker](https://github.com/shaowns) under the supervision of [Dr. Emerson Murphy-Hill](https://github.com/CaptainEmerson). Thanks to Liliana Pasquale, Claudio Menghi, Mazeiar Salehie, Luca Cavallaro, Inah Omoronyia, and Bashar Nuseibeh for their help in establishing this repository.
