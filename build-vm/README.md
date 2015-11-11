@@ -17,7 +17,7 @@
 
 ####Notes:
   * To see the provision results, you can open up command line in the VM running in Virtualbox and run java -version after the provisioning has completed.
-  * Winrm and RDP to the VM is enabled on default host port 5985 and 3377 respectively. Use vagrant rdp to launch the rdp client (non Windows hosts may have to install an RDP client). Use the following credentials (the RDP client should be launced with the user name):
+  * Winrm and RDP to the VM is enabled on default host port 5985 and 3377 respectively. Use vagrant rdp to launch the rdp client (non Windows hosts may have to install an RDP client). Use the following credentials (the RDP client should be launched with the user name):
       * User: `IEUser`
       * Password: `Passw0rd!`
       * Please note that these credentials are set from the base box image creator.
