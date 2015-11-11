@@ -2,7 +2,7 @@
 
 1. Download and install [VirtualBox](https://www.virtualbox.org/).
 2. Download and install [Vagrant](http://www.vagrantup.com/).
-3. Clone this repoitory to your preferred location. 
+3. Clone this repository to your preferred location. 
   * git clone `https://github.com/SoftwareEngineeringToolDemos/FSE-2012-SecuriTAS.git`
 4. Open command line and navigate to the bulild-vm folder of the cloned repository.
 4. Run `vagrant up` to set up the vm. This would do following:
