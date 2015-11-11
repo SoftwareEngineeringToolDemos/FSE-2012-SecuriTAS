@@ -1,0 +1,49 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure(2) do |config|
+  # The most common configuration options are documented and commented below.
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
+
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://atlas.hashicorp.com/search.
+  config.vm.box = "modernIE/w7-ie11"
+
+  # Set VM host name
+  config.vm.hostname = "FSE-2012-SecuriTAS"
+
+  config.vm.boot_timeout = 600
+
+  config.vm.guest = :windows
+
+  # Will use winrm instead of SSH since this is a Windows VM.
+  config.vm.communicator = "winrm"
+
+  # Provider setup - 2GB RAM, and 64MB VRAM with 2 cores.
+  config.vm.provider "virtualbox" do |vb|
+        # Start in gui mode.
+        vb.gui = true
+        vb.memory = "2048"
+        vb.cpus = 2
+        vb.customize ["modifyvm", :id, "--vram", "64"]
+        vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+        vb.name = "FSE-2012-SecuriTAS"   
+    end
+  
+  # Port forward WinRM and RDP
+  config.vm.network :forwarded_port, guest: 3389, host: 3377, id: "rdp", auto_correct: false
+  config.vm.network :forwarded_port, guest: 5985, host: 5985, id: "winrm", auto_correct: true
+  config.windows.set_work_network = true
+  config.winrm.max_tries = 10
+
+  # Install chocolatey.
+  config.vm.provision :shell, path: "shell/InstallChocolatey.bat"
+
+  # Install jdk7, graphviz, and mysql.
+  config.vm.provision :shell, path: "shell/Chocoinstalls.bat"  
+end
