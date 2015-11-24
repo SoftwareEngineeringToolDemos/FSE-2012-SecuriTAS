@@ -1,0 +1,4 @@
+if not exist "C:\Tools" mkdir "C:\Tools"
+if not exist "%USERPROFILE%\Desktop\SecuriTAS Files" mkdir "%USERPROFILE%\Desktop\SecuriTAS Files"
+echo "Downloading SecuriTAS tool files"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "(New-Object Net.WebClient).DownloadFile('https://securitas.googlecode.com/files/Securitas.zip','C:\Tools\SecuriTAS.zip');(New-Object Net.WebClient).DownloadFile('https://securitas.googlecode.com/files/README.pdf','%USERPROFILE%\Desktop\SecuriTAS Files\README.pdf');(new-object -com shell.application).namespace('C:\').CopyHere((new-object -com shell.application).namespace('C:\Tools\SecuriTAS.zip').Items(),16);(new-object -com shell.application).namespace('%USERPROFILE%\Desktop\SecuriTAS Files').CopyHere((new-object -com shell.application).namespace('C:\Tools\SecuriTAS.zip').Items(),16)"

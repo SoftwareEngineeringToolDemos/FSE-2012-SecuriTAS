@@ -1,0 +1,3 @@
+if not exist "C:\Tools" mkdir "C:\Tools"
+echo "Downloading Necessary Files"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "(New-Object Net.WebClient).DownloadFile('link to github','C:\Tools\tool_files.zip');(new-object -com shell.application).namespace('%USERPROFILE%\Desktop').CopyHere((new-object -com shell.application).namespace('C:\Tools\tool_files.zip').Items(),16);(New-Object Net.WebClient).DownloadFile('link to github','C:\Tools\workspace_files.zip');(new-object -com shell.application).namespace('%USERPROFILE%').CopyHere((new-object -com shell.application).namespace('C:\Tools\workspace_files.zip').Items(),16)"

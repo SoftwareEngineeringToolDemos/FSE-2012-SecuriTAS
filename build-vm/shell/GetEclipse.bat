@@ -1,0 +1,3 @@
+if not exist "C:\Tools" mkdir "C:\Tools"
+echo "Downloading Eclipse"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "(New-Object Net.WebClient).DownloadFile('http://eclipse.mirror.rafal.ca/technology/epp/downloads/release/indigo/SR2/eclipse-modeling-indigo-SR2-win32.zip','C:\Tools\Eclipse.zip');(new-object -com shell.application).namespace('C:\').CopyHere((new-object -com shell.application).namespace('C:\Tools\Eclipse.zip').Items(),16)"

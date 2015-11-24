@@ -1,0 +1,3 @@
+if not exist "C:\Tools" mkdir "C:\Tools"
+echo "Downloading JBoss Server"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "(New-Object Net.WebClient).DownloadFile('http://sourceforge.net/projects/jboss/files/JBoss/JBoss-5.1.0.GA/jboss-5.1.0.GA-jdk6.zip/download','C:\Tools\JBoss.zip');(new-object -com shell.application).namespace('C:\').CopyHere((new-object -com shell.application).namespace('C:\Tools\JBoss.zip').Items(),16)"
