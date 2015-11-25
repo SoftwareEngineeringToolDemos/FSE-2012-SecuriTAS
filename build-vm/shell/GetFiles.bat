@@ -5,3 +5,5 @@ echo "Downloading Necessary Files"
 echo "Copying files"
 xcopy C:\Runner\features\*.* C:\eclipse\features /d /s /k /c /f /e /q /h /y /v
 xcopy C:\Runner\plugins\*.* C:\eclipse\plugins /d /s /k /c /f /e /q /h /y /v
+
+copy %USERPROFILE%\Desktop\Run_Graphical_Modeler.bat %PROGRAMDATA%\Microsoft\Windows\"Start Menu"\Programs\Startup
