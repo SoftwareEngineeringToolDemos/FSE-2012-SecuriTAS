@@ -50,8 +50,11 @@ Vagrant.configure(2) do |config|
   config.windows.set_work_network = true
   config.winrm.max_tries = 10
 
-  # Install chocolatey and get Graphviz package.
-  config.vm.provision :shell, path: "shell/GetChocoGraphviz.bat"
+  # Install chocolatey.
+  config.vm.provision :shell, path: "shell/GetChocolatey.bat"
+
+  # Get Graphviz
+  config.vm.provision :shell, path: "shell/GetGraphviz.bat"
 
   # Get jdk 1.6
   config.vm.provision :shell, path: "shell/GetJava.bat"
