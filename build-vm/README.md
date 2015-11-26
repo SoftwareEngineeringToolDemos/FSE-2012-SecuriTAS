@@ -11,17 +11,16 @@
   * Create virtual machine using this image.
   * Launch VM in GUI mode.
   * Install the following dependencies for the tool during the provision:
-    * Graphviz packages using Chocolatey.
     * Java 1.6 (required for JBoss 5.10 GA).
     * Eclipse Indigo.
     * JBoss 5.10 GA.
     * SecuriTAS Tool binaries.
     * MySql.
+    * Graphviz 2.38
   * This will set up the other files necessary for the tool to run and after provisioning has completed, it will perform a restart of the VM. If for some reason the VM fails to restart after the provisioning phase, do `vagrant reload` to restart manually.
 
 ####Acknowledgements:
   * Used vagrant Windows 7 32 bit base box image of [modernIE/w7-ie11](https://vagrantcloud.com/modernIE/boxes/w7-ie11).
-  * Chocolatey powershell non-administrative install script from their [github page](https://github.com/chocolatey/choco/wiki/Installation#command-line).
 
 ####Notes:
   * Do not do anything in the VM during the provisioning stage.
