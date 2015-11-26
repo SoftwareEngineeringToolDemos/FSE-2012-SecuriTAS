@@ -1,0 +1,2 @@
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "(iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))) >$null 2>&1"
+%ALLUSERSPROFILE%\chocolatey\bin\choco install graphviz -y
