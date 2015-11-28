@@ -24,8 +24,8 @@
 
 ####Notes:
   * Do not do anything in the VM during the provisioning stage.
-  * The provision will take a bit of time, it will download more than a GB of setup files and install them in more than one phases.
-  * IMPORTANT: To download files, the powershell WebClient has been used, which is known to be quite finicky. If an error/exception is thrown during provisioning (which can occur due to bad connection or timeouts - some of the links used here are not very stable), just restart the provisioning by `vagrant provision`.
+  * The provision will take a bit of time, it will download nearly a GB of setup files and install them in more than one phases.
+  * IMPORTANT: To download files, the powershell WebClient has been used, which is known to be quite finicky. If an error/exception is thrown during provisioning (which can occur due to bad connection or timeouts - some of the links used here are not very stable), just restart the provisioning by `vagrant provision` or `vagrant reload --provision`.
   * Winrm and RDP to the VM is enabled on default host port 5985 and 3377 respectively. Use vagrant rdp to launch the rdp client (non Windows hosts may have to install an RDP client). Use the following credentials (the RDP client should be launched with the user name already filled in):
       * User: `IEUser`
       * Password: `Passw0rd!`
