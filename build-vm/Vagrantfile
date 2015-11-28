@@ -10,6 +10,7 @@ Vagrant.configure(2) do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
+  # Check if we have the necessary plugin.
   unless Vagrant.has_plugin?("vagrant-reload")
     abort 'Plugin needed: vagrant-reload. Run the following command to install: vagrant plugin install vagrant-reload'
   end
@@ -28,7 +29,8 @@ Vagrant.configure(2) do |config|
   # Will use winrm instead of SSH since this is a Windows VM.
   config.vm.communicator = "winrm"
 
-  # Check if we have the 
+  # Set up synced folder.
+  config.vm.synced_folder "files/", "C:/tool_files/"
 
   # Provider setup - 2GB RAM, and 64MB VRAM with 2 cores.
   config.vm.provider "virtualbox" do |vb|
